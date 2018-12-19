@@ -17,6 +17,7 @@ public class App
     firstCompetitor.doorCount= 5;
     firstCompetitor.mileage = 0.5;
 
+
     // local variables are variables declared inside a method;
         // they don't receive default values;
 
@@ -33,10 +34,13 @@ public class App
 
 firstCompetitor.engine.manufacturer ="BMW";
 
-firstCompetitor = null;
-
         System.out.println(firstEngine.manufacturer);
         System.out.println(firstCompetitor.engine.manufacturer);
+
+        double traveledDistance =
+                firstCompetitor.accelerate(100, 30);
+
+        System.out.println("traveled distance " + traveledDistance);
 
 
 
