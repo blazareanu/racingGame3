@@ -21,10 +21,10 @@ public class Vehicle {
 
 
     }
-  //  public double accelerate (double speed, double durationInHours ) {
-   //     return accelerate(speed, durationInHours) ;
+   public double accelerate (double speed) {
+       return accelerate(speed, 1) ;
 
-   // }
+   }
 
     //overloading
 
