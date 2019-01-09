@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.cheater.CheatingCar;
+
 /**
  * Hello world!
  *
@@ -58,5 +60,12 @@ Vehicle.applicationTotalNumberOfVehicles = 1;
         System.out.println("total from vehicle 2 " + vehicle.applicationTotalNumberOfVehicles);
         System.out.println("total from vehicle 2 " + vehicle2.applicationTotalNumberOfVehicles);
     }
+
+    //este output-ul pentru Cheating Car
+
+
+   // CheatingCar cheatingCompetitor= new (CheatingCar());
+    //cheatingCompetitor setName
+    //double distance = cheatingCompetitor.accelerate(70);
 
 }

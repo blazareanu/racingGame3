@@ -15,12 +15,18 @@ public class Vehicle {
                 durationInHours + " hours");
 
 
-        double distance= speed * durationInHours;
+        double distance = speed * durationInHours;
         System.out.println("traveled distance" + distance);
         return distance;
-
-
     }
+// method used just to demonstrate covaruant return type
+
+        public Vehicle returnSomeVehicle () {
+            return this;
+        }
+
+
+
    public double accelerate (double speed) {
        return accelerate(speed, 1) ;
 
