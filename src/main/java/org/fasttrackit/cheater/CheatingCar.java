@@ -19,7 +19,12 @@ public class CheatingCar extends Vehicle {
         public AutoVehicle returnSomeVehicle () {
             return new AutoVehicle();
         }
-
+        //method used to demonstrate type casting
+    public void testMethod () {
+        System.out.println("Test");
     }
+       // CheatingCar.testMethod();
+
+}
 
 

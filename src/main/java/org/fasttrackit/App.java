@@ -6,10 +6,16 @@ import org.fasttrackit.cheater.CheatingCar;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
+
+        Vehicle cheatingCar = new CheatingCar();
+
+        cheatingCar.accelerate (10,2);
+
+        ((CheatingCar)cheatingCar).testMethod();
+
+
         //declaring a variable and instantiating a Car object;
         //this is also called initialising a variable;
 
@@ -27,6 +33,12 @@ public class App
 //
 //        Car secondCompetitor = new Car(new Engine());
 //        secondCompetitor.setName("Golf");
+
+//polymorphism- an object can takem ultiple forms
+
+
+
+
 //
 //
 //  Engine firstEngine = new Engine ();
@@ -49,23 +61,25 @@ public class App
 //
 
 
-Vehicle vehicle = new Vehicle ();
-Vehicle.applicationTotalNumberOfVehicles = 1;
+        Vehicle vehicle = new Vehicle();
+        Vehicle.applicationTotalNumberOfVehicles = 1;
         System.out.println("total from vehicle 1 " + vehicle.applicationTotalNumberOfVehicles);
 
-        Vehicle vehicle2 = new Vehicle ();
+        Vehicle vehicle2 = new Vehicle();
         Vehicle.applicationTotalNumberOfVehicles = 2;
         System.out.println("total from vehicle 2 " + vehicle2.applicationTotalNumberOfVehicles);
 
         System.out.println("total from vehicle 2 " + vehicle.applicationTotalNumberOfVehicles);
         System.out.println("total from vehicle 2 " + vehicle2.applicationTotalNumberOfVehicles);
+
+
+        //este output-ul pentru Cheating Car
+
+
+        CheatingCar cheatingCompetitor = new CheatingCar();
+        cheatingCompetitor.setName("Test 1");
+        double distance = cheatingCompetitor.accelerate(70);
+        System.out.println("Cheating parcurge distanta de " + distance);
+
     }
-
-    //este output-ul pentru Cheating Car
-
-
-   // CheatingCar cheatingCompetitor= new (CheatingCar());
-    //cheatingCompetitor setName
-    //double distance = cheatingCompetitor.accelerate(70);
-
 }
