@@ -9,7 +9,7 @@ public class Vehicle {
     private double mileage;
     private long totalKm;
 
-
+//overloading
     public double accelerate (double speed, double durationInHours) {
         System.out.println(name + " accelerated with" + speed + " km/h for" +
                 durationInHours + " hours");
@@ -21,6 +21,14 @@ public class Vehicle {
 
 
     }
+  //  public double accelerate (double speed, double durationInHours ) {
+   //     return accelerate(speed, durationInHours) ;
+
+   // }
+
+    //overloading
+
+
 
     public String getName() {
         return name;

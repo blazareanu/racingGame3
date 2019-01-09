@@ -58,4 +58,5 @@ Vehicle.applicationTotalNumberOfVehicles = 1;
         System.out.println("total from vehicle 2 " + vehicle.applicationTotalNumberOfVehicles);
         System.out.println("total from vehicle 2 " + vehicle2.applicationTotalNumberOfVehicles);
     }
+
 }
