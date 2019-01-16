@@ -14,10 +14,26 @@ public class App {
 
         Game game = new Game();
 
+        game.addCompetitor(2);
+        game.displayCompetitors();
+
+
+
         game.addTrack(0, new Track("Highway ", 100));
         game.addTrack(1, new Track("Seaside ", 200));
         game.addTrack(2, new Track("Daqar ", 300));
         game.displayAvailableTracks();
+
+
+
+     //   game.addTrack(2, new Track("Daqar ", 300));
+      //  System.out.println(track1.equals (track2));
+
+       // String a = "test";
+
+        //String c = "test";
+        //a==c
+       // String b = new String (original"test");
 
 
 
