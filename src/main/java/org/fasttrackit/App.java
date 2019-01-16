@@ -9,6 +9,11 @@ import org.fasttrackit.cheater.CheatingCar;
 public class App {
     public static void main(String[] args) {
 
+
+        //folosire modulo
+
+        System.out.println(4%2);
+
         Vehicle cheatingCar = new CheatingCar();
 
         cheatingCar.accelerate (10,2);
