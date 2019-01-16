@@ -86,5 +86,7 @@ public class App {
         double distance = cheatingCompetitor.accelerate(70);
         System.out.println("Cheating parcurge distanta de " + distance);
 
+
+
     }
 }
