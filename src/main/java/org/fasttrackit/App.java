@@ -9,16 +9,29 @@ import org.fasttrackit.cheater.CheatingCar;
 public class App {
     public static void main(String[] args) {
 
+      //  Track track = new Track("X", 0.8);
+
+
+        Game game = new Game();
+
+        game.addTrack(0, new Track("Highway ", 100));
+        game.addTrack(1, new Track("Seaside ", 200));
+        game.addTrack(2, new Track("Daqar ", 300));
+        game.displayAvailableTracks();
+
+
+
+
 
         //folosire modulo
 
-        System.out.println(4%2);
+      //  System.out.println(4%2);
 
-        Vehicle cheatingCar = new CheatingCar();
+       // Vehicle cheatingCar = new CheatingCar();
 
-        cheatingCar.accelerate (10,2);
+      // cheatingCar.accelerate (10,2);
 
-        ((CheatingCar)cheatingCar).testMethod();
+       // ((CheatingCar)cheatingCar).testMethod();
 
 
         //declaring a variable and instantiating a Car object;
