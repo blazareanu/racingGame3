@@ -4,50 +4,38 @@ import org.fasttrackit.cheater.CheatingCar;
 
 /**
  * Hello world!
- *
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-      //  Track track = new Track("X", 0.8);
+        //  Track track = new Track("X", 0.8);
 
 
         Game game = new Game();
-
-        game.addCompetitor(2);
-        game.displayCompetitors();
+        game.start();
 
 
 
-        game.addTrack(0, new Track("Highway ", 100));
-        game.addTrack(1, new Track("Seaside ", 200));
-        game.addTrack(2, new Track("Daqar ", 300));
-        game.displayAvailableTracks();
 
+        //   game.addTrack(2, new Track("Daqar ", 300));
+        //  System.out.println(track1.equals (track2));
 
-
-     //   game.addTrack(2, new Track("Daqar ", 300));
-      //  System.out.println(track1.equals (track2));
-
-       // String a = "test";
+        // String a = "test";
 
         //String c = "test";
         //a==c
-       // String b = new String (original"test");
-
-
-
+        // String b = new String (original"test");
 
 
         //folosire modulo
 
-      //  System.out.println(4%2);
+        //  System.out.println(4%2);
 
-       // Vehicle cheatingCar = new CheatingCar();
+        // Vehicle cheatingCar = new CheatingCar();
 
-      // cheatingCar.accelerate (10,2);
+        // cheatingCar.accelerate (10,2);
 
-       // ((CheatingCar)cheatingCar).testMethod();
+        // ((CheatingCar)cheatingCar).testMethod();
 
 
         //declaring a variable and instantiating a Car object;
@@ -68,9 +56,7 @@ public class App {
 //        Car secondCompetitor = new Car(new Engine());
 //        secondCompetitor.setName("Golf");
 
-//polymorphism- an object can takem ultiple forms
-
-
+//polymorphism- an object can take multiple forms
 
 
 //
@@ -114,7 +100,6 @@ public class App {
         cheatingCompetitor.setName("Test 1");
         double distance = cheatingCompetitor.accelerate(70);
         System.out.println("Cheating parcurge distanta de " + distance);
-
 
 
     }
