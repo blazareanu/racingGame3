@@ -21,25 +21,23 @@ public class Game {
         displayCompetitors();
         addTrack(0, new Track("Highway ", 100));
         addTrack(1, new Track("Seaside ", 200));
-        addTrack(2, new Track("Daqar ", 300));
         displayAvailableTracks();
 
 
-            int track  = getNumberOfTrack();
-           // Track track = tracks [track - 1];
-        //System.out.println("Chosen track: " + track.getName());
+        int trackNumber = getTrackNumberFromUser();
+        Track track = tracks[trackNumber - 1];
+        System.out.println("Chosen track: " + track.getName());
     }
 
-
-    private int getNumberOfTrack() throws Exception {
+    private int getTrackNumberFromUser() throws Exception {
 
         System.out.println("Please enter your track preference: ");
         Scanner scanner = new Scanner(System.in);
 
-       // cum am scris initial pana sa pun try- catch method
+        // cum am scris initial pana sa pun try- catch method
         // int track = scanner.nextInt();
 
-       //mai corect era dupa Scanner scanner sa scriu
+        //mai corect era dupa Scanner scanner sa scriu
 
 
         try {
@@ -47,22 +45,18 @@ public class Game {
 
             return scanner.nextInt();
         } catch (InputMismatchException exception) {
-           //in cazul in care vreau sa arunc un mesaj ca exceptie, las linia de mai jos
+            //in cazul in care vreau sa arunc un mesaj ca exceptie, las linia de mai jos
             // throw new Exception("Expected an integer number");
 
             System.out.println(" Expected an integer number: ");
-            return getNumberOfTrack ();
+            return getTrackNumberFromUser();
         }
 
-
-        }
-
-
+    }
 
     // private Track privateTrackFromUser
     //sout
     //Scanner scanner
-
 
 
     public void addCompetitor(int competitorCount) {
@@ -83,14 +77,13 @@ public class Game {
             competitors.add(vehicle);
 
         }
+
+        //enhanced for with lists same as with arrays
+
+        // for (Vehicle vehicle: competitors){
+        //   System.out.println(vehicle.getName());
+        // }
     }
-
-
-    //enhanced for with lists same as with arrays
-
-    // for (Vehicle vehicle: competitors){
-    //   System.out.println(vehicle.getName());
-    // }
 
 
     private String getVehicleNameFromUser() {
@@ -102,14 +95,13 @@ public class Game {
 
     }
 
-    private double setVehicleAccelerationSpeedUser() {
+    private double getVehicleAccelerationSpeedUser() {
         System.out.println("Please enter acceleration speed: ");
         Scanner scanner = new Scanner(System.in);
         //  return double accelerationSpeed = scanner.nextDouble();
         return scanner.nextDouble();
         //sau putem sa mai scriem ula fraza ca return scanner.nextDouble();
     }
-
 
     public void displayCompetitors() {
         System.out.println(" Welcome! Race is starting with: ");
@@ -122,20 +114,17 @@ public class Game {
         }
     }
 
-
-    public Track addTrack(int index, Track track) {
+    public void addTrack(int index, Track track) {
         // ca sa adaug pe prima poz un obiect
 
 
         tracks[index] = track;
-
-        return track;
     }
 
     public void displayAvailableTracks() {
         System.out.println("Available tracks ");
 
-        // for loop
+        // clasic for loop
 
         //   for (int i = 0; i < tracks.length; i++) {
         //     if (tracks[i] != null) {
@@ -143,7 +132,8 @@ public class Game {
 
 
         //     System.out.println(tracks[i].getName());
-
+        // }
+        // }
 
         //daca nu e negatie atunci putem folosi else
         //else if (true){
@@ -157,6 +147,39 @@ public class Game {
             if (track != null) {
                 System.out.println(track.getName());
             }
+
+
+            boolean noWinnerYet = true;
+
+            // sa tinem minte nr juc care nu mai au combustibil
+
+            int competitorsWithoutFuel = 0;
+
+
+            while (noWinnerYet && competitorsWithoutFuel < competitors.size()) {
+
+                for (Vehicle vehicle : competitors) {
+                    double speed = getVehicleAccelerationSpeedUser();
+                    vehicle.accelerate(speed);
+                    if (vehicle.getFuelLevel() <= 0) {
+                        competitorsWithoutFuel++;
+                    }
+                    if (vehicle.getTotalKm() >= track.getLength()) {
+                        noWinnerYet = false;
+                        System.out.println("The winner is: " + vehicle.getName());
+                        break;
+                    }
+                }
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
